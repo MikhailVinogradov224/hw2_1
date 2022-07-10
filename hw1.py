@@ -1,10 +1,8 @@
 print('Введите вещественное число:')
-a = float(init())
-def summa(num):
-    sum = 0
-    while num > 0:
-        sum += num % 10
-        num //= 10
-    return sum
-
-print(summa(1557))
+a = float(input())
+str_a = str(a)
+str_a = str_a.replace('.', '')
+lst_str = list(str_a)
+lst_num = map(int, lst_str)
+s = sum(lst_num)
+print(s)
